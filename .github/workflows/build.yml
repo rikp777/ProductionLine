@@ -118,7 +118,7 @@ jobs:
       - name: Download build assets
         uses: actions/download-artifact@v1
         with:
-          name: assets
+          name: back-end
           path: public
 #      - name: Setup PHP
 #        uses: atymic/deployer-php-action@master
