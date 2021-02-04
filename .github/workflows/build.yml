@@ -10,7 +10,7 @@ jobs:
         image: mysql:5.7
         env:
           MYSQL_ROOT_PASSWORD: 'secret'
-          MYSQL_DATABASE: 'icodestuff_testing'
+          MYSQL_DATABASE: 'production_line_testing'
           MYSQL_USER: 'rik'
           MYSQL_PASSWORD: 'secret'
         ports:
