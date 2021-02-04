@@ -17,7 +17,7 @@ jobs:
       - name: Upload build files 💾
         uses: actions/upload-artifact@v1
         with:
-          name: front-end
+          name: assets
           path: public
 
   test-php-linux:
@@ -94,12 +94,6 @@ jobs:
           DB_PORT: ${{ job.services.mysql.ports['3306'] }}
           REDIS_PORT: ${{ job.services.redis.ports['6379'] }}
 
-      - name: Upload build files 💾
-        uses: actions/upload-artifact@v1
-        with:
-          name: back-end
-          path: public
-
   docker-hub:
     name: Create docker hub container  🚀
     runs-on: ubuntu-latest
@@ -118,7 +112,7 @@ jobs:
       - name: Download build assets
         uses: actions/download-artifact@v1
         with:
-          name: back-end
+          name: assets
           path: public
 #      - name: Setup PHP
 #        uses: atymic/deployer-php-action@master
