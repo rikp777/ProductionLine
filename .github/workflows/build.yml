@@ -17,7 +17,7 @@ jobs:
       - name: Upload build files 💾
         uses: actions/upload-artifact@v1
         with:
-          name: assets
+          name: front-end
           path: public
 
   test-php-linux:
@@ -93,6 +93,12 @@ jobs:
         env:
           DB_PORT: ${{ job.services.mysql.ports['3306'] }}
           REDIS_PORT: ${{ job.services.redis.ports['6379'] }}
+
+      - name: Upload build files 💾
+        uses: actions/upload-artifact@v1
+        with:
+          name: back-end
+          path: public
 
   docker-hub:
     name: Create docker hub container  🚀
