@@ -78,7 +78,7 @@ class Farmer extends Model
             // Farmer has many Cell
             public function cells()
             {
-                return $this->hasMany(cell::class);
+                return $this->hasMany(Cell::class);
             }
         //endregion
 

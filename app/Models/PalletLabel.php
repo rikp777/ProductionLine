@@ -86,7 +86,7 @@ class PalletLabel extends Model
             // PalletLabel belongs one Cell
             public function cell()
             {
-                return $this->belongsTo(cell::class);
+                return $this->belongsTo(Cell::class);
                 //TODO Palletlabel belongs to many cells because can be mixed that's because farmers are lazy and dont want to make a new palletlabel its something for discussion
             }
         // endregion
